@@ -1,0 +1,35 @@
+body{
+    background: purple;
+    font-size: xx-large;
+}
+
+.CustomContainer{
+    background: yellow;
+}
+
+.customrow{
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.header{
+    margin-top: 1em;
+}
+
+.dynamicContainer{
+    margin-bottom: 1.5em;
+}
+
+.Question{
+    margin: 0.2em auto;
+}
+
+.Answer{
+    padding:0.2em;
+    margin: 0px;
+}
+
+.Answer:hover{
+    background-color: pink;
+    border: 1px solid blue;
+}
