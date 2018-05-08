@@ -5,6 +5,7 @@ body{
 
 .CustomContainer{
     background: yellow;
+    height: 20em;
 }
 
 .customrow{
@@ -33,3 +34,13 @@ body{
     background-color: pink;
     border: 1px solid blue;
 }
+
+.start{
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding:0.2em;
+    background-color: pink;
+    border: 1px solid blue;
+    cursor: pointer;
+}
+
