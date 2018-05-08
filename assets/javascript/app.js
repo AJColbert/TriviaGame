@@ -20,39 +20,64 @@ var correct = 0;
 var incorrect = 0;
 var timedout = 0;
 var QuestionObj;
+var Qcounter = 0;
 
-//Start Button on Click remove and draw questions
-//On Answer Click capture answer and 
+
 
 StartButton();
 
-$(".Answers").on("click", "Start", function(){
+
+function StartButton()
+{
+    $("#Question").empty();
+    $(".Answers").empty();
+    var starth3 = $("<h3>");
+    starth3.attr("class", "start");
+    starth3.text("Start");
+    $(".Answers").append(starth3);
+}
+
+$(".Answers").on("click", ".start", function ()
+{
     StartGame();
 
-}).on("click", "Answer", function(){
+}).on("click", ".Answer", function ()
+{
     var ans = $(this).text();
-    if(ans === QuestionObj.correctanswer)
+    console.log(ans);
+    if (ans === QuestionObj.correctanswer)
     {
         correct++;
+        //Display Correct 
+        //Display Gif
     }
-    else{
+    else
+    {
         incorrect++;
+        //Display Nope
+        //Display Correct answer
+        //Display Gif
     }
 });
 
-function StartGame(){
-
-
-    DisplayQuestion(trivia.question1)
-
-
-
+function StartGame()
+{
+    var length = Object.keys(trivia).length;
+    if(Qcounter < length)
+    {
+        QuestionObj = trivia[Object.keys(trivia)[Qcounter]];
+        DisplayQuestion(QuestionObj);
+        Qcounter++;
+    }
+    else if(Qcounter > length)
+    {
+        //display end game
+    }
 }
 
-
-function DisplayQuestion(QuestionObj)
+function DisplayQuestion(QObj)
 {
-    $("#Question").text(QuestionObj.question);
+    $("#Question").text(QObj.question);
 
     $(".Answers").empty();
 
@@ -60,16 +85,8 @@ function DisplayQuestion(QuestionObj)
     {
         var ansh3 = $("<h3>");
         ansh3.attr("class", "Answer");
-        ansh3.text(QuestionObj.answers[i]);
+        ansh3.text(QObj.answers[i]);
         $(".Answers").append(ansh3);
     }
 }
 
-function StartButton()
-{
-    var starth3 = $("<h3>");
-    ansh3.attr("class", "start");
-    ansh3.text("Start");
-    $(".Answers").append(starth3);
-
-}
