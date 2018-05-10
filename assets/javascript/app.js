@@ -6,7 +6,7 @@ var trivia = {
         src: "https://media.giphy.com/media/chlUmj7brvdWE/giphy.gif"
     },
     question2: {
-        question: "Guinness beer was first brewed in which country?2",
+        question: "Guinness beer was first brewed in which country?",
         answers: ["Scotland", "USA", "England", "Ireland"],
         correctanswer: "Ireland",
         src: "https://media.giphy.com/media/jwMVM6Fq7DjPy/giphy.gif"
@@ -15,15 +15,33 @@ var trivia = {
         question: "What are dried plums called?",
         answers: ["Pommes", "Prunes", "Bananas", "Apricots"],
         correctanswer: "Prunes",
-        src: ""
+        src: "https://media.giphy.com/media/2PDauUpCvUgxi/giphy.gif"
     },
     question4: {
         question: "When was the fast food chain, Mcdonalds, founded?",
         answers: ["1995", "1986", "2000", "1898"],
         correctanswer: "1995",
         src: "https://media.giphy.com/media/y2JUUTICw9yFi/source.gif"
+    },
+    question5: {
+        question: "What is bubble gum made of?",
+        answers: ["Gum", "Chicle", "Paste", "Bubble"],
+        correctanswer: "Chicle",
+        src: "https://media.giphy.com/media/241bMzbm8jLp8FeIeJ/source.mp4"
+    },
+    question6: {
+        question: "What food is Hummus made from?",
+        answers: ["Chickpeas", "Vegitables", "Peanuts", "Beans"],
+        correctanswer: "Chickpeas",
+        src: "https://media.giphy.com/media/Jfu3UlHpJK1Hi/giphy.gif"
+    },
+    question7: {
+        question: "What is sushi traditionally wrapped in?",
+        answers: ["Rice", "Vegitables", "Seaweed", "Cucumber"],
+        correctanswer: "Seaweed",
+        src: "https://media.giphy.com/media/l3q2YZJj7ss1MjOwM/source.gif"
     }
-    ///Add the rest of the question
+    ///Add the rest of the question and giphys
     //Style Title
     //Create Readme
 }
@@ -33,7 +51,7 @@ var incorrect = 0;
 var timedout = 0;
 var QuestionObj;
 var Qcounter = 0;
-var number = 10;
+var number = 20;
 var intervalId;
 
 $(".Time").hide();
@@ -94,7 +112,7 @@ function GetQuestion()
     console.log(length)
     if (Qcounter < length)
     {
-        number = 10;
+        number = 20;
         QuestionObj = trivia[Object.keys(trivia)[Qcounter]];
         DisplayQuestion(QuestionObj);
         Qcounter++;
