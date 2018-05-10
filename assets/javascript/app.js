@@ -1,22 +1,31 @@
 var trivia = {
     question1: {
-        question: "Question1",
-        answers: ["1Answer1", "1Answer2", "1Answer3", "1Answer4"],
-        correctanswer: "Answer1",
-        src: "https://media.giphy.com/media/fAnEC88LccN7a/giphy.gif"
+        question: "How many different flavors of jelly beans exist?",
+        answers: ["20", "100", "50", "43"],
+        correctanswer: "50",
+        src: "https://media.giphy.com/media/chlUmj7brvdWE/giphy.gif"
     },
     question2: {
-        question: "Question2",
-        answers: ["2Answer1", "2Answer2", "2Answer3", "2Answer4"],
-        correctanswer: "Answer2",
-        src: "https://media.giphy.com/media/fAnEC88LccN7a/giphy.gif"
+        question: "Guinness beer was first brewed in which country?2",
+        answers: ["Scotland", "USA", "England", "Ireland"],
+        correctanswer: "Ireland",
+        src: "https://media.giphy.com/media/jwMVM6Fq7DjPy/giphy.gif"
     },
     question3: {
-        question: "Question3",
-        answers: ["3Answer1", "3Answer2", "3Answer3", "3Answer4"],
-        correctanswer: "Answer3",
-        src: "https://media.giphy.com/media/fAnEC88LccN7a/giphy.gif"
+        question: "What are dried plums called?",
+        answers: ["Pommes", "Prunes", "Bananas", "Apricots"],
+        correctanswer: "Prunes",
+        src: ""
+    },
+    question4: {
+        question: "When was the fast food chain, Mcdonalds, founded?",
+        answers: ["1995", "1986", "2000", "1898"],
+        correctanswer: "1995",
+        src: "https://media.giphy.com/media/y2JUUTICw9yFi/source.gif"
     }
+    ///Add the rest of the question
+    //Style Title
+    //Create Readme
 }
 
 var correct = 0;
@@ -24,7 +33,7 @@ var incorrect = 0;
 var timedout = 0;
 var QuestionObj;
 var Qcounter = 0;
-var number = 11;
+var number = 10;
 var intervalId;
 
 $(".Time").hide();
@@ -85,7 +94,7 @@ function GetQuestion()
     console.log(length)
     if (Qcounter < length)
     {
-        number = 11;
+        number = 10;
         QuestionObj = trivia[Object.keys(trivia)[Qcounter]];
         DisplayQuestion(QuestionObj);
         Qcounter++;
@@ -99,6 +108,7 @@ function GetQuestion()
 function DisplayQuestion(QObj)
 {
     run();
+    $("#seconds").text(number);
     $("#Question").text(QObj.question);
 
     $(".Answers").empty();

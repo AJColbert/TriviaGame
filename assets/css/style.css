@@ -1,10 +1,11 @@
 body{
-    background: purple;
     font-size: xx-large;
+    background: url(../images/food.png);
+    background-size: auto, cover;
 }
 
 .CustomContainer{
-    background: yellow;
+    background: #ffdb4d;
    
 }
 
@@ -56,3 +57,7 @@ body{
     cursor: pointer;
 }
 
+img{
+    width: 250px;
+    height: 200px;
+}
