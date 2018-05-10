@@ -27,7 +27,7 @@ var trivia = {
         question: "What is bubble gum made of?",
         answers: ["Gum", "Chicle", "Paste", "Bubble"],
         correctanswer: "Chicle",
-        src: "https://media.giphy.com/media/241bMzbm8jLp8FeIeJ/source.mp4"
+        src: "https://media.giphy.com/media/xyr51WobwN8Eo/giphy.gif"
     },
     question6: {
         question: "What food is Hummus made from?",
