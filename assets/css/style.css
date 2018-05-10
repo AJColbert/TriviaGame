@@ -5,7 +5,7 @@ body{
 
 .CustomContainer{
     background: yellow;
-    height: 20em;
+   
 }
 
 .customrow{
@@ -33,12 +33,24 @@ body{
 .Answer:hover{
     background-color: pink;
     border: 1px solid blue;
+    cursor: pointer;
 }
 
 .start{
     margin-top: 2em;
     margin-bottom: 2em;
     padding:0.2em;
+    background-color: pink;
+    border: 1px solid blue;
+    cursor: pointer;
+}
+
+.startover{
+    padding:0.2em;
+    margin: 0px;
+}
+
+.startover:hover{
     background-color: pink;
     border: 1px solid blue;
     cursor: pointer;
