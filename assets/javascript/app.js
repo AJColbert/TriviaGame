@@ -83,7 +83,7 @@ $(".Answers").on("click", ".start", function ()
 {
     stop();
     var ans = $(this).text();
-    console.log(ans);
+    
     if (ans === QuestionObj.correctanswer)
     {
         correct++;
@@ -105,8 +105,7 @@ $(".Answers").on("click", ".start", function ()
 function GetQuestion()
 {
     var length = Object.keys(trivia).length;
-    console.log("Count" + Qcounter)
-    console.log(length)
+   
     if (Qcounter < length)
     {
         number = 20;
@@ -164,7 +163,6 @@ function drawGif()
 //Final Screen after all questions.
 function FinalDisplay()
 {
-    console.log("Final")
     $(".Answers").empty();
 
     $("#Question").text("All Done, Heres how you did!");
