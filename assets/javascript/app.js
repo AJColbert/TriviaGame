@@ -41,9 +41,6 @@ var trivia = {
         correctanswer: "Seaweed",
         src: "https://media.giphy.com/media/l3q2YZJj7ss1MjOwM/source.gif"
     }
-    ///Add the rest of the question and giphys
-    //Style Title
-    //Create Readme
 }
 
 var correct = 0;
